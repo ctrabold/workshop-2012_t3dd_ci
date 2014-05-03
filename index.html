@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>TYPO3 Quality Improvements</title>
+
+  <meta name="viewport" content="width=device-width"/>
+
+  <link rel="stylesheet" href="./css/reset.css" type="text/css"/>
+  <link rel="stylesheet" href="./css/showoff.css" type="text/css"/>
+
+  <script type="text/javascript" src="./js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="./js/jquery-print.js"></script>
+  <script type="text/javascript" src="./js/jquery.batchImageLoad.js"></script>
+
+  <script type="text/javascript" src="./js/jquery.doubletap-0.1.js"></script>
+
+  <script type="text/javascript" src="./js/fg.menu.js"></script>
+  <script type="text/javascript" src="./js/showoff.js"></script>
+  <script type="text/javascript" src="./js/jTypeWriter.js"> </script>
+  <script type="text/javascript" src="./js/sh_main.min.js"></script>
+  <script type="text/javascript" src="./js/core.js"></script>
+  <script type="text/javascript" src="./js/showoffcore.js"></script>
+  <script type="text/javascript" src="./js/coffee-script.js"></script>
+
+  <link type="text/css" href="./css/fg.menu.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/theme/ui.all.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/sh_style.css" rel="stylesheet" >
+
+  
+    <link rel="stylesheet" href="file/style.css" type="text/css"/>
+  
+
+  
+    <script type="text/javascript" src="file/scripts.js"></script>
+  
+
+  <script type="text/javascript">
+  $(function(){
+      setupPreso(false, './');
+  });
+  </script>
+
+</head>
+
+<body>
+
+<a tabindex="0" href="#search-engines" class="fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" id="navmenu"><span class="ui-icon ui-icon-triangle-1-s"></span>slides</a>
+<div id="navigation" class="hidden"></div>
+
+<div id="help">
+  <table>
+    <tr><td class="key">z, ?</td><td>toggle help (this)</td></tr>
+    <tr><td class="key">space, &rarr;</td><td>next slide</td></tr>
+    <tr><td class="key">shift-space, &larr;</td><td>previous slide</td></tr>
+    <tr><td class="key">d</td><td>toggle debug mode</td></tr>
+    <tr><td class="key">## &lt;ret&gt;</td><td>go to slide #</td></tr>
+    <tr><td class="key">c, t</td><td>table of contents (vi)</td></tr>
+    <tr><td class="key">f</td><td>toggle footer</td></tr>
+    <tr><td class="key">r</td><td>reload slides</td></tr>
+    <tr><td class="key">n</td><td>toggle notes</td></tr>
+    <tr><td class="key">p</td><td>run preshow</td></tr>
+  </table>
+</div>
+
+<div class="buttonNav">
+  <input type="submit" onClick="prevStep();" value="prev"/>
+  <input type="submit" onClick="nextStep();" value="next"/>
+</div>
+
+<div id="preso">loading presentation...</div>
+<div id="footer">
+  <span id="slideInfo"></span>
+  <span id="debugInfo"></span>
+  <span id="notesInfo"></span>
+</div>
+
+<div id="slides" class="offscreen" style="display:none;">
+<div class="slide" data-transition="none"><div class="content front center" ref="intro/01_slide/1">
+<h1>TYPO3 CI</h1>
+
+<h2>New Ideas</h2>
+
+<h2>Status Report + Workshop</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="intro/01_slide/2">
+<h1>Agenda</h1>
+
+<ul>
+<li>Why are we doing it?</li>
+<li>What happened since 2010?</li>
+<li>What are the next steps?</li>
+<li>Q&amp;A / Your ideas</li>
+<li>Hands on / Workshop</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content new-chapter center" ref="why/01_slide/1">
+<h1>Why are we doing it?</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="why/01_slide/2">
+<h1>Disclaimer</h1>
+
+<h2><em>I'm not a marketing guy but&#x2026;</em></h2>
+
+<p class="notes">&#x2026; but what I learned fro other projects at dkd EVERY project improves
+when thinking about QA
+Doing the right things and more right things will follow.</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="why/01_slide/3">
+<p class="notes">It's not only cool nor enough to run automated task and have shiny dashboard.
+.notes The whole idea behind CI and Metrics gets easier to gasp if we think of our users and developers as customers.
+.notes Although it's open source we have to think out of the box.
+.notes Other systems already shine and have more transparency. We should catch up as quick as possible.</p>
+
+<h1><em>We should care more about our customers</em></h1>
+
+<h2>&#x2013; Sincerly Christian</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="why/01_slide/4">
+<h1>Thread users as <em>customers</em></h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="why/01_slide/5">
+<h1>Thread developers as <em>customers</em></h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="why/01_slide/6">
+<h1>Customers <span style="color:red">&#x2764;</span> Transparency</h1>
+
+<h1>Customers <span style="color:red">&#x2764;</span> Processes</h1>
+
+<h1>Customers <span style="color:red">&#x2764;</span> Quality</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="why/01_slide/7">
+<h1>Devs <span style="color:red">&#x2764;</span> Transparency</h1>
+
+<h1>Devs <span style="color:red">&#x2764;</span> Clean Code</h1>
+
+<h1>Devs <span style="color:red">&#x2764;</span> Stability</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="why/01_slide/8">
+<p class="notes">How do we prove the world, we have a stable <em>release candidate</em>?</p>
+
+<h1>Do we have a stable <br/> <em>release candidate</em>?</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="why/01_slide/9">
+<p class="notes">How do we prove the world, we have a stable <strong>product</strong>?
+.notes Do you want to ship a product <br/>that is not tested? (testing by hand equals "not tested")</p>
+
+<h1>Is TYPO3 a stable <strong>product</strong>?</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="why/01_slide/10">
+<h1>untested is considered unstable</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="why/01_slide/11">
+<h1>TYPO3 needs <em>more</em> QA</h1>
+
+<p class="notes">dkd is dedicated to bring QA to TYPO3
+.notes It's crucial for companies to have a stable product</p>
+
+<p class="notes">We - as a community and as (Core) Devs - are responsible for TYPO3's success.
+It touches every developers feelings.
+I don't want to tell you this. But I feel the urge to.</p></div>
+</div><div class="slide" data-transition="none"><div class="content new-chapter center" ref="lessons_learned/01_slide/1">
+<h1>How much QA <br/>do we already have?</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lessons_learned/01_slide/2">
+<h1><a href="http://ci.typo3.org">ci.typo3.org</a></h1>
+
+<h1><a href="http://metrics.typo3.org">metrics.typo3.org</a></h1></div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="lessons_learned/01_slide/3">
+<p><img src="./file/lessons_learned/jenkins.png" alt="Jenkins"/></p>
+
+<h1><a href="ci.typo3.org">ci.typo3.org</a></h1>
+
+<h2>aka "The Worker"</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lessons_learned/01_slide/4">
+<p class="notes">Checks like Code Sniffer, PMD</p>
+
+<h1>commit &gt; check &gt; +1 / -1</h1>
+
+<h2>for TYPO3 v4 Core master</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lessons_learned/01_slide/5">
+<h1>Example check</h1>
+
+<pre><code># Check Coding Style
+phpcs --extensions=php,inc --report=checkstyle
+  --report-file=build/logs/checkstyle.xml .
+</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lessons_learned/01_slide/6">
+<h1>TER-Upload &gt; <a href="http://metrics.typo3.org">metrics.typo3.org</a></h1>
+
+<h2>for TYPO3 Extensions</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lessons_learned/01_slide/7">
+<h1>Example metrics</h1>
+
+<h2>% of comments</h2>
+
+<h2>CGL Violations</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lessons_learned/01_slide/8">
+<h1>Job Overview</h1>
+
+<h2><a href="https://ci.typo3.org/view/TYPO3/view/Core/">https://ci.typo3.org/view/TYPO3/view/Core/</a></h2></div>
+</div><div class="slide" data-transition="none"><div class="content center sonar" ref="lessons_learned/01_slide/9">
+<p class="notes">We can only improve things we see</p>
+
+<p><img src="./file/lessons_learned/sonar-logo.png" alt="Sonar"/></p>
+
+<h1><a href="http://metrics.typo3.org">metrics.typo3.org</a></h1>
+
+<h2>aka "The Dashboard"</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lessons_learned/01_slide/10">
+<h1>Collect code metrics</h1>
+
+<ul>
+<li>Find Hotspots in Code</li>
+<li>Developers can improve code</li>
+<li><em>We can only improve things we see</em></li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content new-chapter center" ref="future/01_slide/1">
+<h1>Next steps</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="future/01_slide/2">
+<h1>Provide Infrastructure for all Tests</h1>
+
+<h2>Unit, Integration, User Acceptance Tests</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="future/01_slide/3">
+<h1>Unit- and Integration-Tests <br/> <em>on each commit</em></h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="future/01_slide/4">
+<h1>User Acceptance Tests <br/> <em>nightly</em></h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="future/01_slide/5">
+<h1>Cross-Browser Tests <br/> <em>before release</em></h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="future/01_slide/6">
+<h1>Build up a virtual environment <br>for each test run</br>
+
+<h2>Easy to reset with snapshots</h2></h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="future/01_slide/7">
+<h1>TravisCI solves this already</h1>
+
+<h2><a href="http://travis-ci.org">http://travis-ci.org</a></h2>
+
+<p class="notes">Would love to test the service for TYPO3 - But Travis supports only GitHub-Projects at the moment</p></div>
+</div><div class="slide" data-transition="none"><div class="content new-chapter center" ref="challenge/01_slide/1">
+<h1>Challenge</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="challenge/01_slide/2">
+<h1>TYPO3 is hard to test</h1>
+
+<h2>requires decent amount of <em>infrastructure</em></h2>
+
+<h3>&#x2013; please prove me wrong!</h3>
+
+<p class="notes">If it's hard to test it's probably bad code?!
+.notes History, Bad architecture, Depends on many things &#x2026; We all know that &#x2026; and things are getting better.</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="challenge/01_slide/3">
+<h1>Different PHP-Versions, Servers, Databases, Cache backends</h1>
+
+<p class="notes">Who of you has set up Redis as Caching Backend?
+.notes Who has a full application stack to test TYPO3 with?</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="challenge/01_slide/4">
+<h1>TYPO3 Dev machine?</h1>
+
+<h1>Hard stuff!</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="challenge/01_slide/5">
+<h1>Easy setup = more testing</h1>
+
+<p class="notes">At dkd we have very good experiences with production like environments.</p></div>
+</div><div class="slide" data-transition="none"><div class="content new-chapter center" ref="challenge/01_slide/6">
+<h1>Next steps 2</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="challenge/01_slide/7">
+<h1><em>TYPO3 Test Environment As Code</em></h1>
+
+<h2>Make TYPO3 infrastructure a community project as well</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="challenge/01_slide/8">
+<h1>Use Chef to configure the machines</h1>
+
+<h2>Collect best practices in one public repository</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="challenge/01_slide/9">
+<h1>Provide Vagrant Boxes for <br>TYPO3-Community</br>
+
+<h2>Developers can easily setup a dev machine and start testing</h2>
+
+<p class="notes">Works very well at dkd</p></h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="challenge/01_slide/10">
+<h1><em>Cross-Browser Tests</em></h1>
+
+<h2>with Selenium and SauceLabs</h2>
+
+<h2>&#x2013; Who want's to install IEs?</h2>
+
+<p class="notes">We can test the test-service to gain experiences
+.notes Showcase?</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="challenge/01_slide/11">
+<h1><a href="https://saucelabs.com/">Showcase</a></h1>
+
+<p class="notes">Saucelabs sponsores several free minutes</p></div>
+</div><div class="slide" data-transition="none"><div class="content new-chapter center" ref="thank_you/01_slide/1">
+<h1>Questions?</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="thank_you/01_slide/2">
+<h1>Thanks!</h1>
+
+<p><a href="http://twitter.com/ctrabold">@ctrabold</a><br/>
+<a href="http://christian-trabold.de">http://christian-trabold.de</a></p></div>
+</div><div class="slide" data-transition="none"><div class="content new-chapter center" ref="workshop/01_slide/1">
+<h1>Workshop</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="workshop/01_slide/2">
+<h1>Goals</h1>
+
+<p class="notes">Bestandsaufnahme</p>
+
+<ul>
+<li>Collect existing build scripts</li>
+<li>Collect ideas</li>
+<li>Get things real</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="workshop/01_slide/3">
+<h1>Add your ideas here &#x261F;</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="workshop/01_slide/4">
+<h1>Hello Phoenix!</h1>
+
+<p>FLOW3 &amp; Phoenix has it's own build server<br>That's OK but can we share experiences?</br>
+
+<p>That would be awesome!</p></p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content new-chapter center" ref="subprojects/01_slide/1">
+<h1>Many possibilities to improve TYPO3</h1>
+
+<h2>without being a Core Dev ;)</h2>
+
+<p class="notes">I'm not a Core Dev as well. I'm a real bad coder. ;)</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="subprojects/01_slide/2">
+<h1>CodeSniffer</h1>
+
+<h2>Collect more standards as Sniffs</h2>
+
+<h2>Improve existing Sniffs</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="subprojects/01_slide/3">
+<p class="notes">Setup repository</p>
+
+<h1>Chef</h1>
+
+<h2>Write cookbooks, help testing them</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="subprojects/01_slide/4">
+<h1>Vagrant</h1>
+
+<h2>Set up infrastructure on the server</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="subprojects/01_slide/5">
+<h1>Write User Acceptance Tests</h1>
+
+<h2>in plain english</h2></div>
+</div><div class="slide" data-transition="none"><div class="content new-chapter center" ref="subprojects/01_slide/6">
+<h1>Thank you!</h1></div>
+</div></div>
+
+</body>
+</html>
