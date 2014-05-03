@@ -1,0 +1,13 @@
+{
+  "name": "TYPO3 Quality Improvements",
+  "sections": [
+    { "section" : "intro" },
+    { "section" : "why" },
+    { "section" : "lessons_learned" },
+    { "section" : "future" },
+    { "section" : "challenge" },
+    { "section" : "thank_you" },
+    { "section" : "workshop" },
+    { "section" : "subprojects" }
+  ]
+}
